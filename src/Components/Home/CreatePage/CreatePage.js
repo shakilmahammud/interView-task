@@ -13,6 +13,10 @@ const CreatePage = () => {
       console.log("Header:",scale?.scalename,scale?.scalevalue)
       console.log("Row :",scale)
   }
+  const handleDelete=()=>{
+
+    setScale("")
+}
 
     return (
         <div>
@@ -36,6 +40,7 @@ const CreatePage = () => {
         <th>SL</th>
         <th>Scale name</th>
         <th>Scale Vule</th>
+        <th>Action</th>
        <tbody>
        
         {
@@ -43,7 +48,7 @@ const CreatePage = () => {
             <td>1</td>
             <td>{scale.scalename}</td>
             <td>{scale.scalevalue}</td>
-            <td></td>
+           <td><button onClick={handleDelete}>Delete</button> </td>
         </tr> : null
         } 
        
